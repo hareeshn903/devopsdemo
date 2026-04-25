@@ -17,19 +17,11 @@ retail:
   orders:
     persistence:
       provider: "postgres"
-      postgres:
-        endpoint: postgres:5432
-        dbname: ordersdb
-        username: admin
-        password: strongpassword
-    messaging:
-      provider: "in-memory"
-      rabbitmq:
-        addresses: ""
-        username: ""
-        password: ""
-      sqs:
-        topic: ""
+      name: ordersdb
+      endpoint: postgres:5432
+      username: admin
+      password: strongpassword
+
 
 springdoc:
   api-docs:
@@ -42,3 +34,13 @@ spring:
     url: jdbc:postgresql://postgres:5432/ordersdb
     username: admin
     password: strongpassword
+
+
+retail:
+  orders:
+    persistence:
+      provider: "postgres"
+      name: ordersdb
+      endpoint: postgres:5432
+      username: admin
+      password: strongpassword
