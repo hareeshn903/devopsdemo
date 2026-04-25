@@ -1,5 +1,3 @@
-
-# -------- Build Stage --------
 FROM ubuntu:24.04 as build-env
 
 ENV DEBIAN_FRONTEND=noninteractive
